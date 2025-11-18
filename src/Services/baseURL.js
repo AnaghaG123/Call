@@ -1,1 +1,1 @@
-export const BaseUrl = 'http://localhost:3000'
+export const BaseUrl = 'https://callserver-sge6.onrender.com'
