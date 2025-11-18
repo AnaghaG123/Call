@@ -1,23 +1,14 @@
 import axiosConfig from "./axiosConfig";
 import { BaseUrl } from "./baseURL";
 
-export const createContact = async (reqBody) => {
+export const createContact = (reqBody) =>
+    axiosConfig('Post', `${BaseUrl}/contact`, reqBody);
 
-    return axiosConfig('Post',`${BaseUrl}/contact`,reqBody)
+export const getContact = () =>
+    axiosConfig('Get', `${BaseUrl}/contact`, "");
 
-}
-export const getContact = async () => {
+export const deleteContact = (id) =>
+    axiosConfig('Delete', `${BaseUrl}/contact/${id}`, {});
 
-    return axiosConfig('Get',`${BaseUrl}/contact`,"")
-
-}
-export const deleteContact = async (id) => {
-
-    return axiosConfig('Delete',`${BaseUrl}/contact/${id}`,{})
-
-}
-export const editContact = async (id,reqBody) => {
-
-    return axiosConfig('Put',`${BaseUrl}/contact/${id}`,reqBody)
-
-}
+export const editContact = (id, reqBody) =>
+    axiosConfig('Put', `${BaseUrl}/contact/${id}`, reqBody);

@@ -1,1 +1,1 @@
-export const BaseUrl = 'https://callserver-sge6.onrender.com'
+export const BaseUrl = 'https://callserver-sge6.onrender.com';
